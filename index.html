@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lt. Col. K. S. Gora — Nigerian Army Executive Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        armyGreen: '#1b3b22',
+                        armyDark: '#0b140d',
+                        armyCard: '#132317',
+                        armyAccent: '#2d5e38',
+                        gold: '#D4AF37',
+                        goldBright: '#F3CB52',
+                        goldDark: '#9A7B3E',
+                        tacticalGray: '#1e2820',
+                        lightIvory: '#F4EFE6'
+                    },
+                    fontFamily: {
+                        heading: ['Cinzel', 'serif'],
+                        subheading: ['Montserrat', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3CB52 0%, #D4AF37 50%, #9A7B3E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .army-card-glass {
+            background: rgba(19, 35, 23, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .hover-gold-glow:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-armyDark text-gray-100 font-sans antialiased selection:bg-gold selection:text-armyDark">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-armyDark/90 backdrop-blur-md border-b border-gold/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo & Rank Insignia -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold to-goldDark flex items-center justify-center text-armyDark font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+                <div>
+                    <span class="font-heading font-bold text-lg md:text-xl tracking-wider text-white block leading-none">LT. COL. K. S. GORA</span>
+                    <span class="text-[10px] tracking-[0.2em] text-gold uppercase font-semibold">Nigerian Army • Infantry / Intelligence</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-8 text-xs font-subheading font-medium tracking-widest uppercase">
+                <a href="#about" class="text-gray-300 hover:text-gold transition-colors">About Profile</a>
+                <a href="#milestones" class="text-gray-300 hover:text-gold transition-colors">Career Timeline</a>
+                <a href="#competencies" class="text-gray-300 hover:text-gold transition-colors">Command & Strategy</a>
+                <a href="#gallery" class="text-gray-300 hover:text-gold transition-colors">Gallery & Delegations</a>
+                <a href="#honors" class="text-gray-300 hover:text-gold transition-colors">Medals & Honors</a>
+            </nav>
+
+            <!-- CTA Dispatch Button -->
+            <div class="hidden sm:flex items-center">
+                <a href="#contact" class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-goldDark via-gold to-goldBright text-armyDark font-subheading font-bold text-xs uppercase tracking-wider shadow-lg hover:brightness-110 active:scale-95 transition-all">
+                    <i class="fas fa-paper-plane mr-2"></i> Official Contact
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="lg:hidden text-gold text-2xl focus:outline-none p-2">
+                <i id="menuIcon" class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Nav -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-armyDark/95 border-b border-gold/30 px-6 py-6 space-y-4">
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-sm font-subheading uppercase tracking-wider text-gray-200 hover:text-gold">About Profile</a>
+            <a href="#milestones" onclick="toggleMobileMenu()" class="block text-sm font-subheading uppercase tracking-wider text-gray-200 hover:text-gold">Career Timeline</a>
+            <a href="#competencies" onclick="toggleMobileMenu()" class="block text-sm font-subheading uppercase tracking-wider text-gray-200 hover:text-gold">Command & Strategy</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="block text-sm font-subheading uppercase tracking-wider text-gray-200 hover:text-gold">Gallery & Delegations</a>
+            <a href="#honors" onclick="toggleMobileMenu()" class="block text-sm font-subheading uppercase tracking-wider text-gray-200 hover:text-gold">Medals & Honors</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="inline-block w-full text-center py-3 rounded-lg bg-gold text-armyDark font-bold uppercase text-xs tracking-wider">
+                Official Contact
+            </a>
+        </div>
+    </header>
+
+    <main class="relative z-10">
+
+        <!-- HERO SECTION -->
+        <section class="relative min-h-[90vh] flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Text & Credentials -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-armyGreen/80 border border-gold/40 text-gold text-xs font-subheading tracking-widest uppercase">
+                        <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span> Active Senior Officer • Nigerian Army
+                    </div>
+
+                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-wide leading-tight">
+                        LIEUTENANT COLONEL <br>
+                        <span class="gold-gradient-text">K. S. GORA</span>
+                    </h1>
+
+                    <p class="font-subheading text-base sm:text-lg text-gold/90 font-medium tracking-wide">
+                        Pass Staff Course (<span class="text-white italic">psc</span>) • Senior Defense & Operational Strategist
+                    </p>
+
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light">
+                        Distinguished Senior Command Officer in the Nigerian Army with demonstrated operational excellence in Joint Military Operations, Counter-Terrorism, Strategic Defense Intelligence, and International Peacekeeping Delegations.
+                    </p>
+
+                    <!-- Tactical Quick Stats Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-4">
+                        <div class="army-card-glass p-4 rounded-xl text-center border border-gold/20">
+                            <span class="font-heading font-bold text-2xl sm:text-3xl text-gold counter" data-target="18">0</span>
+                            <span class="text-[10px] uppercase font-subheading tracking-wider text-gray-400 block mt-1">Years Active Duty</span>
+                        </div>
+                        <div class="army-card-glass p-4 rounded-xl text-center border border-gold/20">
+                            <span class="font-heading font-bold text-2xl sm:text-3xl text-gold counter" data-target="14">0</span>
+                            <span class="text-[10px] uppercase font-subheading tracking-wider text-gray-400 block mt-1">Joint Operations</span>
+                        </div>
+                        <div class="army-card-glass p-4 rounded-xl text-center border border-gold/20">
+                            <span class="font-heading font-bold text-2xl sm:text-3xl text-gold counter" data-target="6">0</span>
+                            <span class="text-[10px] uppercase font-subheading tracking-wider text-gray-400 block mt-1">Command Appointments</span>
+                        </div>
+                        <div class="army-card-glass p-4 rounded-xl text-center border border-gold/20">
+                            <span class="font-heading font-bold text-2xl sm:text-3xl text-gold counter" data-target="100">0</span>
+                            <span class="text-[10px] uppercase font-subheading tracking-wider text-gray-400 block mt-1">% Mission Readiness</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#about" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-goldDark via-gold to-goldBright text-armyDark font-subheading font-bold text-xs uppercase tracking-widest shadow-xl hover:brightness-110 active:scale-95 transition-all">
+                            <i class="fas fa-user-shield mr-2"></i> Full Profile Detail
+                        </a>
+                        <a href="#gallery" class="px-8 py-3.5 rounded-xl army-card-glass text-gold border border-gold/50 font-subheading font-bold text-xs uppercase tracking-widest hover:bg-gold/10 transition-all">
+                            <i class="fas fa-images mr-2"></i> Strategic Gallery
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Officer Portrait Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md group cursor-pointer" onclick="openLightbox('p3_4.jpeg', 'Lt. Col. K. S. Gora - Official Military Dress Uniform Portrait', 'p3')">
+                        <!-- Decorative Frame Accents -->
+                        <div class="absolute -inset-1.5 rounded-2xl bg-gradient-to-r from-gold/40 via-armyGreen to-gold/40 opacity-75 blur group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                        
+                        <div class="relative army-card-glass rounded-2xl overflow-hidden shadow-2xl border border-gold/50">
+                            <!-- Official Dress Portrait -->
+                            <div class="aspect-[4/5] relative overflow-hidden bg-armyDark">
+                                <img src="p3_4.jpeg" 
+                                     alt="Lt. Col. K. S. Gora Official Nigerian Army Dress Portrait" 
+                                     onerror="handleImgError(this, 'p3')"
+                                     class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-armyDark via-transparent to-transparent"></div>
+                                
+                                <div class="absolute bottom-4 left-4 right-4 text-center p-3 rounded-xl bg-armyDark/90 border border-gold/30 backdrop-blur-md flex items-center justify-between">
+                                    <div class="text-left">
+                                        <p class="text-xs uppercase tracking-widest font-subheading text-gold font-bold">Lt. Col. K. S. Gora</p>
+                                        <p class="text-[10px] text-gray-300 font-sans tracking-wide">Nigerian Army Ceremonial Service Dress</p>
+                                    </div>
+                                    <span class="w-8 h-8 rounded-full bg-gold/20 text-gold border border-gold/40 flex items-center justify-center text-xs">
+                                        <i class="fas fa-expand"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-gold uppercase tracking-[0.25em] text-xs font-subheading font-semibold">Leadership & Legacy</span>
+                <h2 class="font-heading text-3xl sm:text-4xl text-white font-bold mt-2">Executive Officer Profile</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Summary Text -->
+                <div class="lg:col-span-7 army-card-glass p-8 sm:p-10 rounded-2xl border border-gold/30 flex flex-col justify-between">
+                    <div class="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed">
+                        <h3 class="font-heading text-2xl text-gold font-bold mb-2">Committed to Sovereign Integrity and Tactical Superiority</h3>
+                        <p>
+                            Lieutenant Colonel K. S. Gora is a senior commissioned officer of the Nigerian Army with a distinguished record of service spanning tactical troop leadership, operational intelligence analysis, and high-level joint military operations.
+                        </p>
+                        <p>
+                            Educated through elite military institutions including the prestigious Nigerian Defence Academy (NDA) and Armed Forces Command and Staff College (AFCSC) Jaji, Lt. Col. Gora has consistently demonstrated strategic leadership in complex asymmetrical warfare, peace support missions, and multinational defense collaborations.
+                        </p>
+                        <p>
+                            His career reflects an unwavering commitment to operational readiness, soldier welfare, dynamic intelligence-led security planning, and fostering international defense bilateral ties.
+                        </p>
+                    </div>
+
+                    <!-- Core Badges Tags -->
+                    <div class="mt-8 pt-6 border-t border-gold/20 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-md bg-armyGreen/80 border border-gold/30 text-[11px] font-subheading text-gold">Nigerian Defence Academy (NDA)</span>
+                        <span class="px-3 py-1 rounded-md bg-armyGreen/80 border border-gold/30 text-[11px] font-subheading text-gold">Pass Staff Course (psc)</span>
+                        <span class="px-3 py-1 rounded-md bg-armyGreen/80 border border-gold/30 text-[11px] font-subheading text-gold">Counter-Terrorism Expert</span>
+                        <span class="px-3 py-1 rounded-md bg-armyGreen/80 border border-gold/30 text-[11px] font-subheading text-gold">International Defense Fellow</span>
+                    </div>
+                </div>
+
+                <!-- Ceremonial Standing Image + Specs -->
+                <div class="lg:col-span-5 flex flex-col gap-6">
+                    <div class="army-card-glass rounded-2xl overflow-hidden border border-gold/30 p-2 group cursor-pointer hover-gold-glow" onclick="openLightbox('p4_3.jpeg', 'Lt. Col. K. S. Gora - Ceremonial Standing Portrait in Defence College Hall', 'p4')">
+                        <div class="relative h-[280px] overflow-hidden rounded-xl">
+                            <img src="p4_3.jpeg" alt="Lt. Col. K. S. Gora Full Standing Ceremonial Dress" onerror="handleImgError(this, 'p4')" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-armyDark/30"></div>
+                            <div class="absolute bottom-2 left-2 right-2 text-center bg-armyDark/80 backdrop-blur-md p-2 rounded-lg border border-gold/30">
+                                <span class="text-xs text-gold font-bold uppercase tracking-wider">Ceremonial Standing Dress • Strategic Hall</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="army-card-glass p-6 rounded-2xl border border-gold/30 space-y-3">
+                        <h3 class="font-heading text-lg text-gold font-bold border-b border-gold/20 pb-2">Military Specifications</h3>
+                        <div class="space-y-2 text-xs font-subheading">
+                            <div class="flex justify-between items-center py-1 border-b border-gray-800">
+                                <span class="text-gray-400 uppercase tracking-wider">Rank & Title</span>
+                                <span class="text-white font-bold">Lieutenant Colonel (Lt. Col.)</span>
+                            </div>
+                            <div class="flex justify-between items-center py-1 border-b border-gray-800">
+                                <span class="text-gray-400 uppercase tracking-wider">Service Branch</span>
+                                <span class="text-white font-bold">Nigerian Army (NA)</span>
+                            </div>
+                            <div class="flex justify-between items-center py-1 border-b border-gray-800">
+                                <span class="text-gray-400 uppercase tracking-wider">Staff Status</span>
+                                <span class="text-gold font-bold">psc (Pass Staff Course)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAREER TIMELINE / MILESTONES -->
+        <section id="milestones" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-gold uppercase tracking-[0.25em] text-xs font-subheading font-semibold">Service Progression</span>
+                <h2 class="font-heading text-3xl sm:text-4xl text-white font-bold mt-2">Operational Career Timeline</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4"></div>
+            </div>
+
+            <!-- Timeline Vertical Grid -->
+            <div class="relative border-l-2 border-gold/30 ml-4 md:ml-32 space-y-12">
+                
+                <!-- Milestone 1 -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-armyDark border-2 border-gold group-hover:bg-gold transition-colors"></div>
+                    <span class="md:absolute md:-left-36 md:top-1 font-heading font-bold text-sm text-gold block mb-1 md:mb-0">PRESENT</span>
+                    <div class="army-card-glass p-6 rounded-2xl border border-gold/20 group-hover:border-gold/50 transition-all">
+                        <h3 class="font-heading text-xl text-white font-bold">Senior Battalion Commander & Strategic Defense Fellow</h3>
+                        <p class="text-xs font-subheading text-gold mb-3">Nigerian Army High Command / International Defense Attaché Fellowships</p>
+                        <p class="text-gray-300 text-sm leading-relaxed font-light">
+                            Directs tactical battalion operations, leading counter-insurgency directives and multi-domain defense strategies. Serves as a key delegate on multinational defense forums and strategic bilateral military exchange programs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-armyDark border-2 border-gold group-hover:bg-gold transition-colors"></div>
+                    <span class="md:absolute md:-left-36 md:top-1 font-heading font-bold text-sm text-gold block mb-1 md:mb-0">STAFF APPT.</span>
+                    <div class="army-card-glass p-6 rounded-2xl border border-gold/20 group-hover:border-gold/50 transition-all">
+                        <h3 class="font-heading text-xl text-white font-bold">Principal General Staff Officer (GSO-1)</h3>
+                        <p class="text-xs font-subheading text-gold mb-3">Operational Intelligence & Logistics Directorate</p>
+                        <p class="text-gray-300 text-sm leading-relaxed font-light">
+                            Spearheaded theater intelligence synthesis, resource deployment strategies, and operational logistics for joint task force operations across critical security sectors.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 3 -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-armyDark border-2 border-gold group-hover:bg-gold transition-colors"></div>
+                    <span class="md:absolute md:-left-36 md:top-1 font-heading font-bold text-sm text-gold block mb-1 md:mb-0">PSC DEGREE</span>
+                    <div class="army-card-glass p-6 rounded-2xl border border-gold/20 group-hover:border-gold/50 transition-all">
+                        <h3 class="font-heading text-xl text-white font-bold">Graduation — Armed Forces Command & Staff College (Jaji)</h3>
+                        <p class="text-xs font-subheading text-gold mb-3">Awarded Pass Staff Course (psc) Dagger Status</p>
+                        <p class="text-gray-300 text-sm leading-relaxed font-light">
+                            Completed advanced military strategy, operational warfare, and joint forces command curriculum with distinction, earning the prestigious 'psc' title.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 4 -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-armyDark border-2 border-gold group-hover:bg-gold transition-colors"></div>
+                    <span class="md:absolute md:-left-36 md:top-1 font-heading font-bold text-sm text-gold block mb-1 md:mb-0">COMMISSION</span>
+                    <div class="army-card-glass p-6 rounded-2xl border border-gold/20 group-hover:border-gold/50 transition-all">
+                        <h3 class="font-heading text-xl text-white font-bold">Commissioning into the Officers Corps</h3>
+                        <p class="text-xs font-subheading text-gold mb-3">Nigerian Defence Academy (NDA), Kaduna</p>
+                        <p class="text-gray-300 text-sm leading-relaxed font-light">
+                            Commissioned as Second Lieutenant into the Nigerian Army Infantry Corps following rigorous military cadet training, leadership drills, and academic excellence.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- COMMAND & CORE COMPETENCIES -->
+        <section id="competencies" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-gold uppercase tracking-[0.25em] text-xs font-subheading font-semibold">Defense Capabilities</span>
+                <h2 class="font-heading text-3xl sm:text-4xl text-white font-bold mt-2">Core Strategic Competencies</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Competency 1 -->
+                <div class="army-card-glass p-8 rounded-2xl border border-gold/20 hover:border-gold/60 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-armyGreen border border-gold/40 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chess-knight"></i>
+                    </div>
+                    <h3 class="font-heading text-xl text-white font-bold mb-2">Tactical Troop Command</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed font-light">
+                        Expertise in commanding combined arms infantry formations, maintaining combat readiness, high morale, and tactical execution under high-stress conditions.
+                    </p>
+                </div>
+
+                <!-- Competency 2 -->
+                <div class="army-card-glass p-8 rounded-2xl border border-gold/20 hover:border-gold/60 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-armyGreen border border-gold/40 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <h3 class="font-heading text-xl text-white font-bold mb-2">Counter-Terrorism & Asymmetric Operations</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed font-light">
+                        Proven capability in planning and executing counter-insurgency and counter-terrorism doctrine tailored to complex regional security environments.
+                    </p>
+                </div>
+
+                <!-- Competency 3 -->
+                <div class="army-card-glass p-8 rounded-2xl border border-gold/20 hover:border-gold/60 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-armyGreen border border-gold/40 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <h3 class="font-heading text-xl text-white font-bold mb-2">International Defense Diplomacy</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed font-light">
+                        Experienced in international military strategic summits, multinational coalition liaison, foreign attaché engagements, and joint peacekeeping initiatives.
+                    </p>
+                </div>
+
+                <!-- Competency 4 -->
+                <div class="army-card-glass p-8 rounded-2xl border border-gold/20 hover:border-gold/60 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-armyGreen border border-gold/40 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3 class="font-heading text-xl text-white font-bold mb-2">Strategic Intelligence Analysis</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed font-light">
+                        Specialized in operational threat assessments, predictive battlefield intelligence, security risk mitigation, and surveillance coordination.
+                    </p>
+                </div>
+
+                <!-- Competency 5 -->
+                <div class="army-card-glass p-8 rounded-2xl border border-gold/20 hover:border-gold/60 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-armyGreen border border-gold/40 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-truck-monster"></i>
+                    </div>
+                    <h3 class="font-heading text-xl text-white font-bold mb-2">Joint Force Logistics & Planning</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed font-light">
+                        Proficient in multi-theater logistical support, troop movement orchestration, supply chain security, and joint military exercise planning.
+                    </p>
+                </div>
+
+                <!-- Competency 6 -->
+                <div class="army-card-glass p-8 rounded-2xl border border-gold/20 hover:border-gold/60 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-armyGreen border border-gold/40 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-handshake-angle"></i>
+                    </div>
+                    <h3 class="font-heading text-xl text-white font-bold mb-2">Crisis & Peacekeeping Management</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed font-light">
+                        Skilled in multi-agency civil-military coordination, disaster relief security, hostage extraction planning, and peace enforcement directives.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PHOTO GALLERY SECTION -->
+        <section id="gallery" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-gold uppercase tracking-[0.25em] text-xs font-subheading font-semibold">Visual Documentation</span>
+                <h2 class="font-heading text-3xl sm:text-4xl text-white font-bold mt-2">Military Gallery & Delegations</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4"></div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Gallery Photo 1 (p3_4.jpeg) -->
+                <div class="army-card-glass rounded-2xl overflow-hidden border border-gold/30 hover-gold-glow group cursor-pointer" onclick="openLightbox('p3_4.jpeg', 'Lt. Col. K. S. Gora - Official Military Dress Uniform Close-up', 'p3')">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="p3_4.jpeg" alt="Official Military Dress Uniform" onerror="handleImgError(this, 'p3')" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-armyDark/40 group-hover:bg-armyDark/10 transition-colors"></div>
+                        <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-armyDark/80 border border-gold/50 text-gold flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading font-bold text-white text-sm">Official Command Portrait</h3>
+                        <p class="text-xs text-gold mt-1">Full Service Dress & Decorations</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Photo 2 (p4_3.jpeg) -->
+                <div class="army-card-glass rounded-2xl overflow-hidden border border-gold/30 hover-gold-glow group cursor-pointer" onclick="openLightbox('p4_3.jpeg', 'Lt. Col. K. S. Gora - Ceremonial Standing Portrait in Somnath Hall', 'p4')">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="p4_3.jpeg" alt="Ceremonial Standing Portrait" onerror="handleImgError(this, 'p4')" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-armyDark/40 group-hover:bg-armyDark/10 transition-colors"></div>
+                        <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-armyDark/80 border border-gold/50 text-gold flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading font-bold text-white text-sm">Ceremonial Standing Dress</h3>
+                        <p class="text-xs text-gold mt-1">National Defense Assembly</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Photo 3 (p5_3.jpeg) -->
+                <div class="army-card-glass rounded-2xl overflow-hidden border border-gold/30 hover-gold-glow group cursor-pointer" onclick="openLightbox('p5_3.jpeg', 'Lt. Col. K. S. Gora Seated at the Senate Building', 'p5')">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="p5_3.jpeg" alt="Lt. Col. Gora at Senate Building" onerror="handleImgError(this, 'p5')" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-armyDark/40 group-hover:bg-armyDark/10 transition-colors"></div>
+                        <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-armyDark/80 border border-gold/50 text-gold flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading font-bold text-white text-sm">Senate Chambers Session</h3>
+                        <p class="text-xs text-gold mt-1">Executive Security Consultation</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Photo 4 (p2_4.jpeg) -->
+                <div class="army-card-glass rounded-2xl overflow-hidden border border-gold/30 hover-gold-glow group cursor-pointer" onclick="openLightbox('p2_4.jpeg', 'Lt. Col. K. S. Gora with Allied International Defense Delegates in Somnath Hall', 'p2')">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="p2_4.jpeg" alt="International Defense Delegation in Somnath Hall" onerror="handleImgError(this, 'p2')" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-armyDark/40 group-hover:bg-armyDark/10 transition-colors"></div>
+                        <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-armyDark/80 border border-gold/50 text-gold flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading font-bold text-white text-sm">International Allied Summit</h3>
+                        <p class="text-xs text-gold mt-1">Foreign Delegation at Somnath Hall</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HONORS, MEDALS & BADGES -->
+        <section id="honors" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-gold uppercase tracking-[0.25em] text-xs font-subheading font-semibold">Distinctions</span>
+                <h2 class="font-heading text-3xl sm:text-4xl text-white font-bold mt-2">Medals, Badges & Commendations</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Medal Item 1 -->
+                <div class="army-card-glass p-6 rounded-2xl border border-gold/20 text-center hover:border-gold transition-all group">
+                    <div class="w-16 h-16 rounded-full bg-gold/10 border border-gold/50 mx-auto flex items-center justify-center text-gold text-2xl mb-4 group-hover:rotate-12 transition-transform">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="font-heading text-lg text-white font-bold mb-1">General Service Medal</h3>
+                    <p class="text-xs text-gold mb-2">Meritorious Military Service</p>
+                    <p class="text-gray-400 text-xs font-light">Awarded for exemplary devotion and active operational duty in defense of national sovereignty.</p>
+                </div>
+
+                <!-- Medal Item 2 -->
+                <div class="army-card-glass p-6 rounded-2xl border border-gold/20 text-center hover:border-gold transition-all group">
+                    <div class="w-16 h-16 rounded-full bg-gold/10 border border-gold/50 mx-auto flex items-center justify-center text-gold text-2xl mb-4 group-hover:rotate-12 transition-transform">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="font-heading text-lg text-white font-bold mb-1">Pass Staff Course (psc)</h3>
+                    <p class="text-xs text-gold mb-2">Armed Forces Staff College</p>
+                    <p class="text-gray-400 text-xs font-light">High honor conferred upon completion of senior command and staff operational warfare studies.</p>
+                </div>
+
+                <!-- Medal Item 3 -->
+                <div class="army-card-glass p-6 rounded-2xl border border-gold/20 text-center hover:border-gold transition-all group">
+                    <div class="w-16 h-16 rounded-full bg-gold/10 border border-gold/50 mx-auto flex items-center justify-center text-gold text-2xl mb-4 group-hover:rotate-12 transition-transform">
+                        <i class="fas fa-shield-cat"></i>
+                    </div>
+                    <h3 class="font-heading text-lg text-white font-bold mb-1">Operational Forces Medal</h3>
+                    <p class="text-xs text-gold mb-2">Counter-Insurgency Theater</p>
+                    <p class="text-gray-400 text-xs font-light">Recognizing leadership during active tactical engagements in operational combat zones.</p>
+                </div>
+
+                <!-- Medal Item 4 -->
+                <div class="army-card-glass p-6 rounded-2xl border border-gold/20 text-center hover:border-gold transition-all group">
+                    <div class="w-16 h-16 rounded-full bg-gold/10 border border-gold/50 mx-auto flex items-center justify-center text-gold text-2xl mb-4 group-hover:rotate-12 transition-transform">
+                        <i class="fas fa-ribbon"></i>
+                    </div>
+                    <h3 class="font-heading text-lg text-white font-bold mb-1">Peacekeeping Commendation</h3>
+                    <p class="text-xs text-gold mb-2">International Support</p>
+                    <p class="text-gray-400 text-xs font-light">Conferred for outstanding civil-military peace enforcement and international security missions.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- OFFICIAL DISPATCH / CONTACT SECTION -->
+        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <div class="army-card-glass p-8 sm:p-12 rounded-3xl border border-gold/40 shadow-2xl relative overflow-hidden">
+                <div class="text-center mb-10">
+                    <span class="text-gold uppercase tracking-[0.25em] text-xs font-subheading font-semibold">Secure Communication</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl text-white font-bold mt-2">Official Liaison & Inquiries</h2>
+                    <p class="text-gray-400 text-xs sm:text-sm mt-2 font-light">For high-level military inquiries, defense consultancy, official dispatches, and delegation scheduling.</p>
+                    <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+                </div>
+
+                <form onsubmit="handleFormSubmit(event)" id="contactForm" class="space-y-6 max-w-2xl mx-auto">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs uppercase font-subheading text-gold mb-2">Full Name / Rank *</label>
+                            <input type="text" required placeholder="e.g. Major A. Bello / Mr. John Doe" class="w-full px-4 py-3 rounded-xl bg-armyDark border border-gold/30 text-white text-xs focus:outline-none focus:border-gold transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase font-subheading text-gold mb-2">Organization / Agency *</label>
+                            <input type="text" required placeholder="e.g. Defense Headquarters / Agency" class="w-full px-4 py-3 rounded-xl bg-armyDark border border-gold/30 text-white text-xs focus:outline-none focus:border-gold transition-colors">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase font-subheading text-gold mb-2">Official Email Address *</label>
+                        <input type="email" required placeholder="official@domain.gov.ng" class="w-full px-4 py-3 rounded-xl bg-armyDark border border-gold/30 text-white text-xs focus:outline-none focus:border-gold transition-colors">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase font-subheading text-gold mb-2">Inquiry Classification / Subject *</label>
+                        <select required class="w-full px-4 py-3 rounded-xl bg-armyDark border border-gold/30 text-white text-xs focus:outline-none focus:border-gold transition-colors">
+                            <option value="official">Official Military Communications</option>
+                            <option value="delegation">International Delegation & Summit</option>
+                            <option value="strategy">Defense Strategy & Strategic Consultation</option>
+                            <option value="general">General Professional Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase font-subheading text-gold mb-2">Dispatch Message *</label>
+                        <textarea rows="4" required placeholder="Write your official inquiry or message detail here..." class="w-full px-4 py-3 rounded-xl bg-armyDark border border-gold/30 text-white text-xs focus:outline-none focus:border-gold transition-colors resize-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-goldDark via-gold to-goldBright text-armyDark font-subheading font-bold text-xs uppercase tracking-widest shadow-xl hover:brightness-110 transition-all">
+                        <i class="fas fa-lock mr-2"></i> Submit Secure Official Dispatch
+                    </button>
+                </form>
+
+                <div id="formSuccess" class="hidden mt-4 p-4 rounded-xl bg-armyGreen border border-gold/40 text-gold text-center text-xs font-subheading">
+                    <i class="fas fa-check-circle mr-2 text-base"></i> Official dispatch received. The Senior Officer's Secretariat will review your inquiry.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="army-card-glass border-t border-gold/30 py-8 px-4 text-center text-xs text-gray-400 font-subheading">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <i class="fas fa-shield-alt text-gold"></i>
+                <span class="text-white font-bold tracking-wider">LT. COL. K. S. GORA</span> — NIGERIAN ARMY
+            </div>
+            <p class="tracking-widest uppercase text-[10px] text-gray-500">
+                Official Leadership & Tactical Portfolio • All Rights Reserved
+            </p>
+            <a href="#" class="text-gold hover:underline text-[11px]"><i class="fas fa-arrow-up mr-1"></i> Back to Top</a>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL FOR IMAGES -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4" onclick="closeLightbox()">
+        <div class="relative max-w-4xl w-full army-card-glass p-4 rounded-2xl border border-gold/40" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-4 -right-4 w-10 h-10 rounded-full bg-gold text-armyDark font-bold text-lg flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-30">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="lightboxMediaContainer" class="w-full flex justify-center items-center">
+                <img id="lightboxImage" src="" alt="Enlarged Visual" class="w-full max-h-[75vh] object-contain rounded-xl">
+            </div>
+            <div class="mt-4 text-center">
+                <p id="lightboxCaption" class="font-heading font-bold text-white text-base sm:text-lg"></p>
+                <p class="text-xs text-gold mt-1">Official Nigerian Army Archive Visual</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Embedded SVG Fallbacks for robust visual previewing across all environments
+        const fallbackVisuals = {
+            p3: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="700" viewBox="0 0 600 700"><rect width="600" height="700" fill="%230F2A18"/><rect x="20" y="20" width="560" height="660" fill="none" stroke="%23D4AF37" stroke-width="2"/><circle cx="300" cy="260" r="130" fill="%231E462C" stroke="%23D4AF37" stroke-width="3"/><path d="M 220 220 Q 300 130 380 220 C 370 190 230 190 220 220 Z" fill="%230B1C10"/><circle cx="300" cy="180" r="14" fill="%23D4AF37"/><path d="M 120 680 L 180 430 L 420 430 L 480 680 Z" fill="%23143520" stroke="%23D4AF37" stroke-width="2"/><path d="M 180 430 L 300 500 L 420 430" fill="%23D4AF37" opacity="0.3"/><rect x="210" y="470" width="70" height="25" fill="%23D4AF37" rx="3"/><text x="300" y="610" font-family="Cinzel, serif" font-weight="bold" font-size="24" fill="%23D4AF37" text-anchor="middle">LT. COL. K. S. GORA</text><text x="300" y="640" font-family="sans-serif" font-size="14" fill="%23FFFFFF" letter-spacing="3" text-anchor="middle">NIGERIAN ARMY • psc</text></svg>`,
+            p4: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="700" viewBox="0 0 600 700"><rect width="600" height="700" fill="%2308140C"/><rect x="20" y="20" width="560" height="660" fill="none" stroke="%23D4AF37" stroke-width="2"/><rect x="240" y="70" width="120" height="180" fill="%23122B1B" stroke="%23D4AF37" stroke-width="2"/><rect x="80" y="100" width="100" height="500" fill="%23008751"/><rect x="180" y="100" width="100" height="500" fill="%23FFFFFF"/><rect x="280" y="100" width="100" height="500" fill="%23008751" opacity="0.3"/><path d="M 220 220 L 380 220 L 410 650 L 190 650 Z" fill="%231E462C" stroke="%23D4AF37" stroke-width="2"/><path d="M 200 240 Q 150 320 230 380" fill="none" stroke="%23D4AF37" stroke-width="5"/><text x="300" y="600" font-family="Cinzel, serif" font-weight="bold" font-size="22" fill="%23D4AF37" text-anchor="middle">CEREMONIAL DRESS</text><text x="300" y="630" font-family="sans-serif" font-size="13" fill="%23A3E635" text-anchor="middle">DEFENCE COLLEGE ASSEMBLY</text></svg>`,
+            p5: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="700" viewBox="0 0 600 700"><rect width="600" height="700" fill="%230A160F"/><circle cx="300" cy="180" r="90" fill="%238B0000" stroke="%23D4AF37" stroke-width="4"/><text x="300" y="175" font-family="sans-serif" font-weight="bold" font-size="22" fill="%23FFFFFF" text-anchor="middle">SENATE</text><text x="300" y="200" font-family="sans-serif" font-size="12" fill="%23D4AF37" text-anchor="middle">★ NIGERIA ★</text><rect x="120" y="320" width="360" height="280" rx="20" fill="%231E3A8A"/><circle cx="300" cy="400" r="70" fill="%23111827"/><text x="300" y="630" font-family="Cinzel, serif" font-weight="bold" font-size="20" fill="%23D4AF37" text-anchor="middle">SENATE CHAMBERS CONSULTATION</text></svg>`,
+            p2: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="700" viewBox="0 0 600 700"><rect width="600" height="700" fill="%23050C07"/><rect x="150" y="100" width="300" height="40" fill="%23D4AF37"/><text x="300" y="128" font-family="Cinzel, serif" font-weight="bold" font-size="20" fill="%23000000" text-anchor="middle">SOMNATH HALL</text><g fill="%231E462C" stroke="%23D4AF37" stroke-width="1.5"><rect x="40" y="280" width="40" height="220" rx="5"/><rect x="100" y="280" width="40" height="220" rx="5"/><rect x="160" y="280" width="40" height="220" rx="5"/><rect x="220" y="280" width="40" height="220" rx="5"/><rect x="280" y="280" width="40" height="220" rx="5"/><rect x="340" y="280" width="40" height="220" rx="5"/><rect x="400" y="280" width="40" height="220" rx="5"/><rect x="460" y="280" width="40" height="220" rx="5"/><rect x="520" y="280" width="40" height="220" rx="5"/></g><text x="300" y="610" font-family="Cinzel, serif" font-weight="bold" font-size="20" fill="%23D4AF37" text-anchor="middle">INTERNATIONAL ALLIED DELEGATION</text></svg>`
+        };
+
+        function handleImgError(imgElem, key) {
+            if (fallbackVisuals[key]) {
+                imgElem.onerror = null;
+                imgElem.src = fallbackVisuals[key];
+            }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fas fa-bars';
+            } else {
+                menuIcon.className = 'fas fa-times';
+            }
+        }
+
+        // Lightbox Functionality
+        function openLightbox(imgSrc, captionText, fallbackKey) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxCaption = document.getElementById('lightboxCaption');
+
+            lightboxImage.onerror = function() {
+                if (fallbackKey && fallbackVisuals[fallbackKey]) {
+                    lightboxImage.src = fallbackVisuals[fallbackKey];
+                }
+            };
+
+            lightboxImage.src = imgSrc;
+            lightboxCaption.textContent = captionText;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Key Stats Animated Counter
+        const counters = document.querySelectorAll('.counter');
+        let animated = false;
+
+        window.addEventListener('scroll', () => {
+            const statsSection = document.getElementById('about');
+            if (!statsSection) return;
+            const position = statsSection.getBoundingClientRect();
+
+            if (position.top < window.innerHeight && !animated) {
+                animated = true;
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    let count = 0;
+                    const speed = Math.ceil(target / 40);
+
+                    const updateCount = () => {
+                        count += speed;
+                        if (count < target) {
+                            counter.innerText = count;
+                            setTimeout(updateCount, 40);
+                        } else {
+                            counter.innerText = target + (target === 100 ? '%' : '+');
+                        }
+                    };
+                    updateCount();
+                });
+            }
+        });
+
+        // Contact Form Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const form = document.getElementById('contactForm');
+            const successToast = document.getElementById('formSuccess');
+
+            form.reset();
+            successToast.classList.remove('hidden');
+
+            setTimeout(() => {
+                successToast.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
